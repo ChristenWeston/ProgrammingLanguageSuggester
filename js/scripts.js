@@ -14,7 +14,6 @@ $(document).ready(function() {
     const birthdayScore1 = $("#birthday").val();
     const bestSongScore1 = parseInt($("#best-song").val());
     const totalScore = animalScore1 + soulScore1 + potatoScore1 + bestSongScore1;
-    alert("This is your total score (Max: 20 Min:3) :" + totalScore);
 
     let result;
     if (totalScore === 20) {
@@ -29,8 +28,6 @@ $(document).ready(function() {
       result = $("#quiz-result5").show();
     }
 
-    //Show result
-    //$("#quiz-result").show();
     $("#quiz").hide();
   });
 });
