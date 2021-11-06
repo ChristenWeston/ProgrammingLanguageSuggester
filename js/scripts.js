@@ -1,8 +1,14 @@
 $(document).ready(function() {
-  $("form#quiz").submit(function() {
+  $("#quiz-result").hide();
+  $("form#quiz").submit(function(event) {
     event.preventDefault();
 
-    const animalScore1 = parseInt($("#question1").val());
+    const animalScore1 = $("input:radio[name=animal]:checked").val();
+    //Just for testing animal score value
     alert(animalScore1);
+
+
+    $("#quiz-result").show();
+    $("#quiz").hide();
   });
 });
