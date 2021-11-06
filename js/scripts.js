@@ -1,5 +1,8 @@
 $(document).ready(function() {
   $("#quiz-result").hide();
+  $("#quiz-result2").hide();
+  $("#quiz-result3").hide();
+  $("#quiz-result4").hide();
   $("form#quiz").submit(function(event) {
     event.preventDefault();
 
@@ -21,11 +24,23 @@ $(document).ready(function() {
     alert("This is your song score" + bestSongScore1);
 
     const totalScore = animalScore1 + soulScore1 + potatoScore1 + bestSongScore1;
-    alert("This is your total score" + totalScore);
-    
-    let result;
+    alert("This is your total score (Max: 20 Min:3) :" + totalScore);
 
-    $("#quiz-result").show();
+    let result;
+    if (totalScore === 20) {
+      result = $("#quiz-result").show();
+    } else if (totalScore <= 19 && totalScore>= 15) {
+      result = $("#quiz-result2").show();
+    } else if (totalScore <15 && totalScore >10) {
+      result = $("#quiz-result3").show();
+    } else if (totalScore <=10 && totalScore > 3) {
+      result = $("#quiz-result4").show();
+    } else if (totalScore === 3) {
+      result = Go;
+    }
+
+    //Show result
+    //$("#quiz-result").show();
     $("#quiz").hide();
   });
 });
