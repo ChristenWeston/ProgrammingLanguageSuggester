@@ -6,7 +6,6 @@ $(document).ready(function() {
   $("#quiz-result5").hide();
   $("form#quiz").submit(function(event) {
     event.preventDefault();
-
     const animalScore1 = parseInt($("input:radio[name=animal]:checked").val());
     const soulScore1 = parseInt($("#soul").val());
     const potatoScore1 = parseInt($("#favorite-potato").val());
@@ -14,7 +13,6 @@ $(document).ready(function() {
     const birthdayScore1 = $("#birthday").val();
     const bestSongScore1 = parseInt($("#best-song").val());
     const totalScore = animalScore1 + soulScore1 + potatoScore1 + bestSongScore1;
-
     let result;
     if (totalScore === 20) {
       result = $("#quiz-result").show();
@@ -27,7 +25,6 @@ $(document).ready(function() {
     } else if (totalScore === 3) {
       result = $("#quiz-result5").show();
     }
-
     $("#quiz").hide();
   });
 });
