@@ -13,18 +13,36 @@ $(document).ready(function() {
     const birthdayScore1 = $("#birthday").val();
     const bestSongScore1 = parseInt($("#best-song").val());
     const totalScore = animalScore1 + soulScore1 + potatoScore1 + bestSongScore1;
-    let result;
     if (totalScore === 20) {
-      result = $("#quiz-result").show();
+      $("#quiz-result").show();
+      $("#quiz-result2").hide();
+      $("#quiz-result3").hide();
+      $("#quiz-result4").hide();
+      $("#quiz-result5").hide();
     } else if (totalScore <= 19 && totalScore>= 15) {
-      result = $("#quiz-result2").show();
+      $("#quiz-result2").show();
+      $("#quiz-result").hide();
+      $("#quiz-result3").hide();
+      $("#quiz-result4").hide();
+      $("#quiz-result5").hide();
     } else if (totalScore <15 && totalScore >10) {
-      result = $("#quiz-result3").show();
+      $("#quiz-result3").show();
+      $("#quiz-result").hide();
+      $("#quiz-result2").hide();
+      $("#quiz-result4").hide();
+      $("#quiz-result5").hide();
     } else if (totalScore <=10 && totalScore > 3) {
-      result = $("#quiz-result4").show();
+      $("#quiz-result4").show();
+      $("#quiz-result").hide();
+      $("#quiz-result2").hide();
+      $("#quiz-result3").hide();
+      $("#quiz-result5").hide();
     } else if (totalScore === 3) {
-      result = $("#quiz-result5").show();
+      $("#quiz-result5").show();
+      $("#quiz-result").hide();
+      $("#quiz-result2").hide();
+      $("#quiz-result3").hide();
+      $("#quiz-result4").hide();
     }
-    $("#quiz").hide();
   });
 });
